@@ -41,29 +41,23 @@ class StudentController extends Controller
     {
 
         $validated = $request->validate([
-            'matricule' => 'required|max:15',
-            'first_name' => 'required|max:15',
-            'last_name' => 'required|max:15',
-            'email' => 'required|email',
-            'phone' => 'required|max:15',
-        ]/*,
-            [
-                'matricule.required' => 'Le Matricule est obligatoire !',
-                'first_name.required' => 'Veuillez renseigner un prénom svp',
-                'last_name.required' => 'Le Nom est obligatoire',
-                'email.required' => 'L\'Email est obligatoire',
-                'email.email' => 'Veuillez renseigner un email valide',
-                'phone.required' => 'Telephone obligatoire',
-
-            ]*/);
-      /*  return $validated;*/
-      /*  Student::create([
+            'matricule' => 'required',
+            'firstName' => 'required',
+            'lastName' => 'required',
+            'email' => 'required',
+            'phone' => 'required',
+        ]); 
+        Student::create($validated);
+            
+        /*  
+        Student::create([
               'matricule' => $request->get('matricule'),
-              'first_name' => $request->get('prenom'),
-              'last_name' => $request->get('nom'),
+              'firstName' => $request->get('prenom'),
+              'lastName' => $request->get('nom'),
               'email' => $request->get('email'),
               'phone' => $request->get('tel')
-          ]);*/
+          ]);
+          */
 
         return redirect()->back()->with('success','Student created successfully');
         // return response()->json(['message' => "Student created successfully"]);
