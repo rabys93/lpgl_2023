@@ -34,14 +34,14 @@
                 </div>
                 <div class="mb-3">
                     <label for="InputFirstname" class="form-label">Prénom</label>
-                    <input type="text" id="InputFirstname" class="form-control" placeholder="Votre prénom" name="prenom">
+                    <input type="text" id="InputFirstname" class="form-control" placeholder="Votre prénom" name="first_name">
                     @error('first_name')
                     <div class="alert alert-danger">{{ $message }}</div>
                     @enderror
                 </div>
                 <div class="mb-3">
                     <label for="InputLastname" class="form-label">Nom</label>
-                    <input type="text" id="InputLastname" class="form-control" placeholder="Votre nom" name="nom">
+                    <input type="text" id="InputLastname" class="form-control" placeholder="Votre nom" name="last_name">
                     @error('last_name')
                     <div class="alert alert-danger">{{ $message }}</div>
                     @enderror
@@ -55,7 +55,7 @@
                 </div>
                 <div class="mb-3">
                     <label for="InputPhone" class="form-label">Phone</label>
-                    <input type="text" id="InputPhone" class="form-control " placeholder="Votre numéro de telephone" name="tel">
+                    <input type="text" id="InputPhone" class="form-control " placeholder="Votre numéro de telephone" name="phone">
                     @error('phone')
                     <div class="alert alert-danger">{{ $message }}</div>
                     @enderror
